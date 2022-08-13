@@ -14,6 +14,7 @@
 body {
   font-family: "Rubik", sans-serif;
   height: 100vh;
+  overflow: hidden;
 }
 
 .back-img {
@@ -117,6 +118,6 @@ hr {
 }
 
 #map {
-  height: 450px;
+  height: 500px;
   width: 100%;
 }
