@@ -5,24 +5,24 @@ export default function ResultingData({ data }) {
     <div className="resulting-data">
       <section className="data-item">
         <h2 className="secondary-heading">IP Address</h2>
-        <p className="data">{data && data.ip}</p>
+        <p className="data">{data.ip}</p>
       </section>
       <hr />
       <section className="data-item">
         <h2 className="secondary-heading">Location</h2>
         <p className="data">
-          {data && `${data.region}, ${data.city} ${data.postalCode}`}
+          {`${data.region}, ${data.city} ${data.postalCode}`}
         </p>
       </section>
       <hr />
       <section className="data-item">
         <h2 className="secondary-heading">Timezone</h2>
-        <p className="data">{data && `UTC${data.timezone}`}</p>
+        <p className="data">{`UTC${data.timezone}`}</p>
       </section>
       <hr />
       <section className="data-item">
         <h2 className="secondary-heading">ISP</h2>
-        <p className="data">{data && data.isp}</p>
+        <p className="data">{data.isp}</p>
       </section>
     </div>
   );

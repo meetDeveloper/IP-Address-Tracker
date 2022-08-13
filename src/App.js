@@ -4,7 +4,16 @@ import ContentContainer from "./components/ContentContainer";
 import Map from "./components/MapContainer";
 
 export default function App() {
-  const [data, setData] = React.useState();
+  const [data, setData] = React.useState({
+    ip: "8.8.8.8",
+    region: "California",
+    city: "Mountain View",
+    lat: 37.38605,
+    lng: -122.08385,
+    postalCode: "94035",
+    timezone: "UTC-07:00",
+    isp: "Google LLC",
+  });
 
   function makeRequest(searchString) {
     const request = new XMLHttpRequest();
@@ -71,7 +80,7 @@ export default function App() {
         HandleKeypress={HandleKeypress}
         data={data}
       />
-      <Map lat={data?.lat || 51.505} lng={data?.lng || -0.09} />
+      <Map lat={data.lat} lng={data.lng} />
     </>
   );
 }
